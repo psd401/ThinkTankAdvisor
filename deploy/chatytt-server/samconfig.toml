@@ -1,8 +1,8 @@
 version = 0.1
 [default.deploy.parameters]
-stack_name = "chatytt-api"
+stack_name = "aichatcore-api"
 resolve_s3 = true
-s3_prefix = "chatytt-api"
+s3_prefix = "aichatcore-api"
 region = "eu-west-1"
 confirm_changeset = true
 capabilities = "CAPABILITY_IAM"

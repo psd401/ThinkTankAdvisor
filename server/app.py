@@ -2,8 +2,8 @@ from dotenv import load_dotenv
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
-from chatytt.chains.standard import ConversationalQAChain
-from chatytt.vector_store.pinecone_db import PineconeDB
+from aichatcore.chains.standard import ConversationalQAChain
+from aichatcore.vector_store.pinecone_db import PineconeDB
 from server.utils.chat import parse_chat_history
 from server.utils.dynamodb import (
     is_new_user,

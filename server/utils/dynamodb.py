@@ -3,7 +3,7 @@ from typing import List, Any
 
 import boto3
 
-table = boto3.resource("dynamodb").Table("chatytt-chat-history")
+table = boto3.resource("dynamodb", region_name='us-west-2').Table("aichatcore-chat-history")
 
 
 def fetch_chat_history(user_id: str):

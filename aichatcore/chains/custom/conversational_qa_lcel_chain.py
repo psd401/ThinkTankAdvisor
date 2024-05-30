@@ -1,15 +1,15 @@
 from typing import List
 
 from dotenv import load_dotenv
-from langchain.chat_models import ChatOpenAI
-from langchain.chat_models.base import BaseChatModel
-from langchain.prompts import ChatPromptTemplate, PromptTemplate
+from langchain_community.chat_models import ChatOpenAI
+from langchain_community.chat_models.base import BaseChatModel
+from langchain_core.prompts import ChatPromptTemplate, PromptTemplate
 from langchain.schema import StrOutputParser, format_document
-from langchain.schema.vectorstore import VectorStore
+from langchain_community.vectorstores import VectorStore
 
-from chatytt.conf.config import load_config
-from chatytt.chains.base_chain import BaseChatChain
-from chatytt.vector_store.pinecone_db import PineconeDB
+from aichatcore.conf.config import load_config
+from aichatcore.chains.base_chain import BaseChatChain
+from aichatcore.vector_store.pinecone_db import PineconeDB
 
 chain_conf = load_config()["chains"]
 load_dotenv()

@@ -2,16 +2,16 @@ import os
 
 from dotenv import load_dotenv
 
-from chatytt.utils.s3 import list_keys_at_prefix_dir_level
-from chatytt.embeddings.s3_json_document_loader import S3JsonFileLoader
-from chatytt.embeddings import pre_processing
-from chatytt.vector_store.pinecone_db import PineconeDB
-from chatytt.conf.config import load_config
+from aichatcore.utils.s3 import list_keys_at_prefix_dir_level
+from aichatcore.embeddings.s3_json_document_loader import S3JsonFileLoader
+from aichatcore.embeddings import pre_processing
+from aichatcore.vector_store.pinecone_db import PineconeDB
+from aichatcore.conf.config import load_config
 
 
 def get_latest_transcript_file_keys():
     transcript_keys = list_keys_at_prefix_dir_level(
-        bucket="chatyt-youtube-data",
+        bucket="aichatcore-youtube-data",
         filter_prefix_dir=f"video-transcripts/"
         f"{os.environ.get('PLAYLIST_NAME')}-transcripts/",
     )
@@ -24,7 +24,7 @@ def get_latest_transcript_file_keys():
     )
 
     latest_transcript_files = list_keys_at_prefix_dir_level(
-        bucket="chatyt-youtube-data",
+        bucket="aichatcore-youtube-data",
         filter_prefix_dir=file_filter_prefix,
     )
 
@@ -44,7 +44,7 @@ def lambda_handler(event, context):
     docs = []
     for file_key in latest_transcript_file_keys:
         loader = S3JsonFileLoader(
-            bucket="chatyt-youtube-data",
+            bucket="aichatcore-youtube-data",
             key=file_key,
             text_splitter=pre_processing.get_recursive_character_splitter(),
         )

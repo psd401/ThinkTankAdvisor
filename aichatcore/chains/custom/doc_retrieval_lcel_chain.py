@@ -6,7 +6,7 @@ from langchain.prompts import PromptTemplate
 from langchain.schema import format_document
 from langchain_core.callbacks import CallbackManagerForChainRun
 
-from chatytt.vector_store.pinecone_db import PineconeDB
+from aichatcore.vector_store.pinecone_db import PineconeDB
 
 
 class DocRetrievalLCELChain(Chain):

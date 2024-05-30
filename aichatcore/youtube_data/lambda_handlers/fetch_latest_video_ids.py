@@ -4,9 +4,9 @@ from datetime import datetime, timedelta
 
 from dotenv import load_dotenv
 
-from chatytt.youtube_data.playlist_data_loader import PlaylistDataLoader
-from chatytt.utils.s3 import save_json_to_s3
-from chatytt.conf.config import load_config
+from aichatcore.youtube_data.playlist_data_loader import PlaylistDataLoader
+from aichatcore.utils.s3 import save_json_to_s3
+from aichatcore.conf.config import load_config
 
 
 def lambda_handler(event, context):
@@ -23,7 +23,7 @@ def lambda_handler(event, context):
 
     save_json_to_s3(
         video_ids,
-        bucket="chatyt-youtube-data",
+        bucket="aichatcore-youtube-data",
         key=f"video-ids/"
         f"{os.environ.get('PLAYLIST_NAME')}-video-ids/"
         f"{int(time.time())}/"

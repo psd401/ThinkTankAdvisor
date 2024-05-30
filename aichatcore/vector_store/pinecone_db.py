@@ -3,8 +3,8 @@ from typing import List
 
 import pinecone
 from langchain.schema import Document
-from langchain.vectorstores import Pinecone
-from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain_community.vectorstores import Pinecone
+from langchain_community.embeddings import OpenAIEmbeddings
 
 
 class PineconeDB:

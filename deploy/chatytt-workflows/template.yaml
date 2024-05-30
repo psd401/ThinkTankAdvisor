@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: AWS CloudFormation stack for ChatYTT chatytt-workflows
+Description: AWS CloudFormation stack for aichatcore aichatcore-workflows
 
 Globals:
   Function:
@@ -51,7 +51,7 @@ Resources:
   FetchLatestVideoIDsFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: chatytt.youtube_data.lambda_handlers.fetch_latest_video_ids.lambda_handler
+      Handler: aichatcore.youtube_data.lambda_handlers.fetch_latest_video_ids.lambda_handler
       Policies:
         - AmazonS3FullAccess
       Environment:
@@ -64,7 +64,7 @@ Resources:
   FetchLatestVideoTranscripts:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: chatytt.youtube_data.lambda_handlers.fetch_latest_video_transcripts.lambda_handler
+      Handler: aichatcore.youtube_data.lambda_handlers.fetch_latest_video_transcripts.lambda_handler
       Policies:
         - AmazonS3FullAccess
       Environment:
@@ -77,7 +77,7 @@ Resources:
   FetchLatestTranscriptEmbeddings:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: chatytt.embeddings.lambda_handlers.fetch_latest_transcript_embeddings.lambda_handler
+      Handler: aichatcore.embeddings.lambda_handlers.fetch_latest_transcript_embeddings.lambda_handler
       MemorySize: 512
       Policies:
         - AmazonS3FullAccess

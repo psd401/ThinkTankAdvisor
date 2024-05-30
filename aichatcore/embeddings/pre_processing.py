@@ -1,6 +1,6 @@
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
-from chatytt.conf.config import load_config
+from aichatcore.conf.config import load_config
 
 pre_processing_conf = load_config()["embeddings"]["pre_processing"]
 

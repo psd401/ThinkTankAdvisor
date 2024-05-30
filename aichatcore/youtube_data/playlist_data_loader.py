@@ -4,8 +4,8 @@ from datetime import datetime
 
 from youtube_api.youtube_api import YoutubeDataApi
 
-from chatytt.youtube_data.utils import APIKeyNotFoundError
-from chatytt.youtube_data.data_models import VideoMetadataFromAPI
+from aichatcore.youtube_data.utils import APIKeyNotFoundError
+from aichatcore.youtube_data.data_models import VideoMetadataFromAPI
 
 
 class PlaylistDataLoader:

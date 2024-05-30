@@ -2,9 +2,9 @@
 
 rm -rf ./code_uri
 mkdir code_uri
-cd code_uri && mkdir chatytt/ && cd ..
+cd code_uri && mkdir aichatcore/ && cd ..
 
-cp -r ../chatytt/. ./code_uri/chatytt
+cp -r ../aichatcore/. ./code_uri/aichatcore
 cp -r ../server/. ./code_uri/server
 
 poetry export --without-hashes -f requirements.txt --output requirements.txt

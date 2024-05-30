@@ -1,13 +1,13 @@
 from dotenv import load_dotenv
-from langchain.chat_models import ChatOpenAI
+from langchain_community.chat_models import ChatOpenAI
 from langchain.evaluation.qa import QAGenerateChain, QAEvalChain
 
-from chatytt.chains.standard import ConversationalQAChain
-from chatytt.chains.custom import (
+from aichatcore.chains.standard import ConversationalQAChain
+from aichatcore.chains.custom import (
     ConversationalQASequentialChain,
     ConversationalQALCELChain,
 )
-from chatytt.vector_store.pinecone_db import PineconeDB
+from aichatcore.vector_store.pinecone_db import PineconeDB
 
 
 def get_example_docs(vector_store, sample_size):

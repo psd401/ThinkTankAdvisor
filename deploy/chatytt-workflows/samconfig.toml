@@ -1,8 +1,8 @@
 version = 0.1
 [default.deploy.parameters]
-stack_name = "chatytt-workflows"
+stack_name = "aichatcore-workflows"
 resolve_s3 = true
-s3_prefix = "chatytt-workflows"
+s3_prefix = "aichatcore-workflows"
 region = "eu-west-1"
 confirm_changeset = true
 capabilities = "CAPABILITY_IAM"

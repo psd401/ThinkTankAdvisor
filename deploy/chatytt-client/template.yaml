@@ -1,18 +1,18 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: AWS CloudFormation stack for ChatYTT web app
+Description: AWS CloudFormation stack for aichatcore web app
 
 Resources:
   AmplifyApp:
     Type: AWS::Amplify::App
     Properties:
-      Name: amplify-chatytt-client
-      Repository: https://github.com/suresha97/ChatYTT
+      Name: amplify-aichatcore-client
+      Repository: https://github.com/suresha97/aichatcore
       AccessToken: '{{resolve:secretsmanager:github-token:SecretString:github-token}}'
       IAMServiceRole: !GetAtt AmplifyRole.Arn
       EnvironmentVariables:
         - Name: ENDPOINT
-          Value: !ImportValue 'chatytt-api-ChatYTTAPIURL'
+          Value: !ImportValue 'aichatcore-api-aichatcoreAPIURL'
 
   AmplifyBranch:
     Type: AWS::Amplify::Branch
@@ -45,7 +45,7 @@ Resources:
   CognitoUserPool:
     Type: AWS::Cognito::UserPool
     Properties:
-      UserPoolName: chatytt-userpool
+      UserPoolName: aichatcore-userpool
       AliasAttributes:
         - email
       UsernameConfiguration:
@@ -63,7 +63,7 @@ Resources:
   WebCognitoUserPoolClient:
     Type: AWS::Cognito::UserPoolClient
     Properties:
-      ClientName: chatytt-webclient
+      ClientName: aichatcore-webclient
       UserPoolId: !Ref CognitoUserPool
       ExplicitAuthFlows:
         - ALLOW_USER_SRP_AUTH

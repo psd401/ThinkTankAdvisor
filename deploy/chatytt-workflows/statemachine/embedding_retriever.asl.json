@@ -7,7 +7,7 @@
       "ResultPath": null,
       "Parameters": {
         "Payload.$": "$",
-        "FunctionName": "arn:aws:lambda:eu-west-1:853084042591:function:chatytt-FetchLatestVideoIDsFunction-YbOwAk0rcHED:$LATEST"
+        "FunctionName": "arn:aws:lambda:eu-west-1:853084042591:function:aichatcore-FetchLatestVideoIDsFunction-YbOwAk0rcHED:$LATEST"
       },
       "Retry": [
         {
@@ -30,7 +30,7 @@
       "ResultPath": null,
       "Parameters": {
         "Payload.$": "$",
-        "FunctionName": "arn:aws:lambda:eu-west-1:853084042591:function:chatytt-FetchLatestVideoTranscripts-pQMWri9yIXVT:$LATEST"
+        "FunctionName": "arn:aws:lambda:eu-west-1:853084042591:function:aichatcore-FetchLatestVideoTranscripts-pQMWri9yIXVT:$LATEST"
       },
       "Retry": [
         {
@@ -53,7 +53,7 @@
       "ResultPath": null,
       "Parameters": {
         "Payload.$": "$",
-        "FunctionName": "arn:aws:lambda:eu-west-1:853084042591:function:chatytt-FetchLatestTranscriptEmbeddings-8jsfHWSOmVGq:$LATEST"
+        "FunctionName": "arn:aws:lambda:eu-west-1:853084042591:function:aichatcore-FetchLatestTranscriptEmbeddings-8jsfHWSOmVGq:$LATEST"
       },
       "Retry": [
         {

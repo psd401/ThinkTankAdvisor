@@ -1,4 +1,4 @@
-from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain_community.embeddings.openai import OpenAIEmbeddings
 
 _SUPPORTED_EMBEDDING_SOURCES = ["open-ai"]
 

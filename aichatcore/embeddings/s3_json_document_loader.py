@@ -4,7 +4,7 @@ from langchain.document_loaders.base import BaseLoader
 from langchain.schema import Document
 from langchain.text_splitter import TextSplitter
 
-from chatytt.utils.s3 import load_json_from_s3_as_dict
+from aichatcore.utils.s3 import load_json_from_s3_as_dict
 
 
 class S3JsonFileLoader(BaseLoader):
