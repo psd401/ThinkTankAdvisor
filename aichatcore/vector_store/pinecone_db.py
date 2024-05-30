@@ -1,7 +1,7 @@
 import os
 from typing import List
 
-from langchain_pinecone import Pinecone
+from langchain_pinecone import Pinecone, PineconeClient
 from langchain.schema import Document
 from langchain_community.vectorstores import Pinecone
 from langchain_community.embeddings import OpenAIEmbeddings
@@ -20,9 +20,10 @@ class PineconeDB:
         self.vector_store.add_documents(documents=docs)
 
     def initialise_pinecone(self):
-        self.pc = Pinecone(api_key=os.environ.get("PINECONE_API_KEY"))
-        if self.index_name not in self.pc.list_indexes().names():
-            self.pc.create_index(
+        api_key = os.environ.get("PINECONE_API_KEY")
+        self.pc_client = PineconeClient(api_key=api_key)
+        if self.index_name not in self.pc_client.list_indexes():
+            self.pc_client.create_index(
                 name=self.index_name,
                 dimension=1536,
                 metric='euclidean',
@@ -31,6 +32,7 @@ class PineconeDB:
                     region='us-west-2'
                 )
             )
+
     def get_index(self, num_pool_threads: int = 4):
         return pinecone.Index(self.index_name, pool_threads=num_pool_threads)
 
