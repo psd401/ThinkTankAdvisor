@@ -2683,17 +2683,20 @@ files = [
 
 [[package]]
 name = "werkzeug"
-version = "2.0.3"
+version = "3.0.3"
 description = "The comprehensive WSGI web application library."
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.8"
 files = [
-    {file = "Werkzeug-2.0.3-py3-none-any.whl", hash = "sha256:1421ebfc7648a39a5c58c601b154165d05cf47a3cd0ccb70857cbdacf6c8f2b8"},
-    {file = "Werkzeug-2.0.3.tar.gz", hash = "sha256:b863f8ff057c522164b6067c9e28b041161b4be5ba4d0daceeaa50a163822d3c"},
+    {file = "werkzeug-3.0.3-py3-none-any.whl", hash = "sha256:fc9645dc43e03e4d630d23143a04a7f947a9a3b5727cd535fdfe155a17cc48c8"},
+    {file = "werkzeug-3.0.3.tar.gz", hash = "sha256:097e5bfda9f0aba8da6b8545146def481d06aa7d3266e7448e2cccf67dd8bd18"},
 ]
 
+[package.dependencies]
+MarkupSafe = ">=2.1.1"
+
 [package.extras]
-watchdog = ["watchdog"]
+watchdog = ["watchdog (>=2.3)"]
 
 [[package]]
 name = "win32-setctime"
@@ -2859,4 +2862,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "b0967397571382eae14b2dd8f4051b6c9e3158296db4eb0f461921b587fd95d8"
+content-hash = "53f9c9f9ab5fd4957426e1d7e6370dd2fe00f6054503d73516dba49a9019f6f6"
