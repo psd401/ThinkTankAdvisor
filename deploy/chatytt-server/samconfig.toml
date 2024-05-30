@@ -3,7 +3,7 @@ version = 0.1
 stack_name = "aichatcore-api"
 resolve_s3 = true
 s3_prefix = "aichatcore-api"
-region = "eu-west-1"
+region = "us-west-2"
 confirm_changeset = true
 capabilities = "CAPABILITY_IAM"
 parameter_overrides = "PineconeAPIKey=\"{{resolve:secretsmanager:pinecone-api-key:SecretString:pinecone-api-key}}\" OpenaiAPIKey=\"{{resolve:secretsmanager:openai-api-key:SecretString:openai-api-key}}\""
