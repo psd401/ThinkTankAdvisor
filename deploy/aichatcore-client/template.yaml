@@ -7,8 +7,8 @@ Resources:
     Type: AWS::Amplify::App
     Properties:
       Name: amplify-aichatcore-client
-      Repository: https://github.com/suresha97/aichatcore
-      AccessToken: '{{resolve:secretsmanager:github-token:SecretString:github-token}}'
+      Repository: https://github.com/psd401/aichatcore
+      AccessToken: '{{resolve:secretsmanager:aichatcore/github_token:SecretString:aichatcore.github_token}}'
       IAMServiceRole: !GetAtt AmplifyRole.Arn
       EnvironmentVariables:
         - Name: ENDPOINT
@@ -69,3 +69,8 @@ Resources:
         - ALLOW_USER_SRP_AUTH
         - ALLOW_REFRESH_TOKEN_AUTH
       PreventUserExistenceErrors: ENABLED
+
+Outputs:
+  AmplifyAppURL:
+    Description: "URL of the AIChatCore App"
+    Value: !GetAtt AmplifyApp.DefaultDomain

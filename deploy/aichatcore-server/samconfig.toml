@@ -6,5 +6,5 @@ s3_prefix = "aichatcore-api"
 region = "us-west-2"
 confirm_changeset = true
 capabilities = "CAPABILITY_IAM"
-parameter_overrides = "PineconeAPIKey=\"{{resolve:secretsmanager:pinecone-api-key:SecretString:pinecone-api-key}}\" OpenaiAPIKey=\"{{resolve:secretsmanager:openai-api-key:SecretString:openai-api-key}}\""
+parameter_overrides = "PineconeAPIKey=\"{{resolve:secretsmanager:aichatcore/pinecone_api_key:SecretString:aichatcore.pinecone_api_key}}\" OpenaiAPIKey=\"{{resolve:secretsmanager:aichatcore/openai_api_key:SecretString:aichatcore.openai_api_key}}\""
 image_repositories = []
