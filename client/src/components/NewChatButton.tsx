@@ -31,7 +31,7 @@ function NewChatButton({setCurrentChat, previousChats, setPreviousChats, current
 
     return (
         <button
-            className="new-chat-button"
+            className="bg-blue-500 hocus:bg-blue-600"
             onClick={() => {createNewChat()}}
         > <img className="add-icon-img" src={addIcon}/> New Chat
         </button>
