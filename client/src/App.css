@@ -88,8 +88,6 @@ button:active {
     cursor: pointer;
     float: left;
     left: 20px;
-    box-shadow: 0 4px 8px 0 #DD0525,
-                 0 6px 28px 0 #DD0525;
 }
 
 .add-icon-img {
@@ -98,7 +96,6 @@ button:active {
     margin: 1rem;
     float: left;
 }
-
 
 .chat-history-button {
     display: flex;
@@ -149,8 +146,6 @@ button:active {
     cursor: pointer;
     float: left;
     left: 20px;
-    box-shadow: 0 4px 8px 0 #DD0525,
-                 0 6px 28px 0 #DD0525;
 }
 
 .sign-out-button {
@@ -166,8 +161,6 @@ button:active {
     cursor: pointer;
     float: left;
     left: 20px;
-    box-shadow: 0 4px 8px 0 #DD0525,
-                 0 6px 28px 0 #DD0525;
 }
 
 .save-icon-img {
@@ -214,7 +207,7 @@ button:active {
 }
 
 .bot-chat-item {
-    background: rgba(255, 255, 255, 0.1);;
+    background: rgba(52, 52, 52, 0.1);;
     width: fit-content;
     border-radius: 0.5rem;
     margin: 1rem;
@@ -237,7 +230,6 @@ button:active {
     text-align: justify;
 }
 
-
 .bot-chat-img {
     object-fit: cover;
     height: 32px;
@@ -246,10 +238,7 @@ button:active {
     margin-right: 1rem;
     margin-top: 1rem;
     border-radius: 0.5rem;
-    /*box-shadow:  0 4px 8px 0 #DD0525,*/
-    /*0 6px 28px 0 #DD0525;*/
 }
-
 
 .user-chat-img {
     object-fit: cover;
@@ -259,7 +248,6 @@ button:active {
     margin-top: 1rem;
     border-radius: 0.5rem;
 }
-
 
 #input-message-container {
     position: relative;
@@ -273,7 +261,6 @@ button:active {
     text-align: center;
 }
 
-
  #input-message {
      height: 55px;
     width: 90%;
@@ -282,10 +269,7 @@ button:active {
     background-color: rgba(255, 255, 255, 0.01);
     padding : 15px 15px;
     border-radius: 5px;
-    box-shadow: 0 4px 8px 0 #DD0525,
-                0 6px 28px 0 #DD0525;
 }
-
 
 .submit-message-button {
     border: solid 0.5px rgba(255, 255, 255 ,0.5);
@@ -321,8 +305,6 @@ button:active {
     /*background: rgba(183, 10, 36, 0.26);*/
     background: linear-gradient(to bottom right, rgba(183, 10, 36, 0.57) 0%, #b70a24 100%);
     border-radius: 5px;
-    /*box-shadow: 0 4px 8px 0 #DD0525,*/
-    /*         0 6px 28px 0 #DD0525;*/
 }
 
 ::-webkit-scrollbar-corner {
@@ -331,8 +313,6 @@ button:active {
 
 ::-webkit-scrollbar-track {
     background: #191919;
-    /*box-shadow: 0 4px 8px 0 #DD0525,*/
-    /*0 6px 28px 0 #DD0525;;*/
 }
 
 /* starting new css specific to PSD */
