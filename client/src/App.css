@@ -334,3 +334,7 @@ button:active {
     /*box-shadow: 0 4px 8px 0 #DD0525,*/
     /*0 6px 28px 0 #DD0525;;*/
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
