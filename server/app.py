@@ -36,7 +36,16 @@ def get_query_response():
 
     response = chain.get_response(query=query, chat_history=chat_history)
 
-    return jsonify({"response": response})
+    formatted = {
+        statusCode: 200,
+        headers: {
+            "Access-Control-Allow-Headers" : "*",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "*"
+        },
+        body: jsonify({"response": response}),
+    };
+    return formatted;
 
 
 @app.route("/get-chat-history/", methods=["GET"])
@@ -52,7 +61,16 @@ def get_chat_history():
     response = {"chatHistory": fetch_chat_history(user_id=user_id)["ChatHistory"]}
     app.logger.debug(f"response: {response}")
 
-    return jsonify({"response": response})
+    formatted = {
+        statusCode: 200,
+        headers: {
+            "Access-Control-Allow-Headers" : "*",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "*"
+        },
+        body: jsonify({"response": response}),
+    };
+    return formatted;
 
 
 @app.route("/save-chat-history/", methods=["PUT"])
@@ -66,7 +84,16 @@ def save_chat_history():
     else:
         update_chat_history(user_id=user_id, chat_history=data["chatHistory"])
 
-    return jsonify({"response": "chat saved"})
+    formatted = {
+        statusCode: 200,
+        headers: {
+            "Access-Control-Allow-Headers" : "*",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "*"
+        },
+        body: jsonify({"response": response}),
+    };
+    return formatted;
 
 
 if __name__ == "__main__":

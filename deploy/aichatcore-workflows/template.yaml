@@ -4,7 +4,7 @@ Description: AWS CloudFormation stack for aichatcore aichatcore-workflows
 
 Globals:
   Function:
-    Runtime: python3.9
+    Runtime: python3.12
     Timeout: 120
     CodeUri: ../code_uri/.
     Architectures:

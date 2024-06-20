@@ -18,6 +18,9 @@ langchain-community = "*"
 langchain-core = "*"
 boto3 = "*"
 langchain-pinecone = "*"
+awsgi = "*"
+blinker = "*"
+awsgi2 = "*"
 
 [dev-packages]
 
